@@ -17,4 +17,5 @@ DCGAN论文地址：https://arxiv.org/pdf/1511.06434.pdf
  我用到的是CalebA人脸数据集（[官网链接](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html)）是香港中文大学的开放数据，包含10,177个名人身份的202,599张人脸图片，并且都做好了特征标记，这对人脸相关的训练是非常好用的数据集。可以通过官网的百度云进行下载。其中img文件夹有三个文件，“img_align_celeba.zip”是jpg格式的，比较小，1G多，我采用的是这个文件，直接解压即可。其他文件夹的含义和标注可以网上搜索查阅。
  ## 代码结构
  ![在这里插入图片描述](https://img-blog.csdnimg.cn/20181116181605608.png)
+
 其中checkpoint是生成的模型保存的地方；logs是tensorboard --logdir logs来通过浏览器可视化一些训练过程；而samples是每训练100次patch后，验证generator输出的图片的保存文件夹；main是函数主入口，通过flags保存一系列参数；model是这个DCGAN的生成对抗性模型，而ops封装了一些model中调用的tensorflow的函数，方便调用，比如线性，反卷积（deconvolution）批量归一化（batch_norm）等；utils是一些图片处理保存之类的功能性函数
