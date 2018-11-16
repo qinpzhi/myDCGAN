@@ -17,4 +17,4 @@ DCGAN论文地址：https://arxiv.org/pdf/1511.06434.pdf
  ## 代码结构
  ![在这里插入图片描述](https://img-blog.csdnimg.cn/20181116181605608.png)
 
-其中checkpoint是生成的模型保存的地方；logs是tensorboard --logdir logs来通过浏览器可视化一些训练过程；而samples是每训练100次patch后，验证generator输出的图片的保存文件夹；main是函数主入口，通过flags保存一系列参数；model是这个DCGAN的生成对抗性模型，而ops封装了一些model中调用的tensorflow的函数，方便调用，比如线性，反卷积（deconvolution）批量归一化（batch_norm）等；utils是一些图片处理保存之类的功能性函数
+其中checkpoint是生成的模型保存的地方；logs是tensorboard --logdir logs来通过浏览器可视化一些训练过程；而samples是每训练100次patch后，验证generator输出的图片的保存文件夹；main是函数主入口，通过flags保存一系列参数；model是这个DCGAN的生成对抗性模型，而ops封装了一些model中调用的tensorflow的函数，方便调用，比如线性，反卷积（deconvolution）批量归一化（batch_norm）等；utils是一些图片处理保存之类的功能性函数，运行时将datadir改成你的celeA图片文件夹的地址，sample_dir改成celeA图片文件夹就可以直接运行，如果input_size和output_size要改，记住将utils中的也改掉
