@@ -2,7 +2,6 @@
 参考文章：https://blog.csdn.net/stalbo/article/details/79359095
 DCGAN论文地址：https://arxiv.org/pdf/1511.06434.pdf
 我的代码是根据此项目修改学习的：https://github.com/carpedm20/DCGAN-tensorflow
-我自己的项目地址是：
 # DCGAN
 在读DCGAN([Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks](https://arxiv.org/pdf/1511.06434.pdf))之前，我首先读的文章是GAN([Generative Adversarial Nets](https://arxiv.org/pdf/1406.2661.pdf))
 在以往的尝试中，将CNN应用于GAN，都没有获得成功。但是经过一系列探索，我们找到一类结构，可以在分辨率更高、更深的生成模型上稳定地训练。而本篇文章的方法是基于对CNN的以下改进：
